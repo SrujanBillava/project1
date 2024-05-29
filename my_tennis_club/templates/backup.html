@@ -1,0 +1,19 @@
+<!-- templates/contact.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Add a New Member</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table> 
+            {{ form.as_table }}
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    <p></p>
+    <p>Back to <a href="{% url 'allmembers.html' %}"> All Members </a></p>
+</body>
+</html>
